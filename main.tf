@@ -9,7 +9,7 @@ resource aws_vpc "hashicat" {
 
   tags = {
     Name = "${var.prefix}-vpc"
-  }
+      }
 }
 
 resource aws_subnet "hashicat" {
@@ -114,6 +114,8 @@ resource aws_instance "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
+    Billable = true
+    Department = "devops"
   }
 }
 
